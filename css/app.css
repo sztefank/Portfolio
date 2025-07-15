@@ -1,0 +1,212 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    color: #e0e0e0;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 100%;
+}
+
+/* Entferne alle Übergangsanimationen für Moduswechsel */
+html, body, #app, .project-card, .btn, .dropdown-menu, .dropdown-item {
+    transition: none !important;
+}
+
+/* Custom Loader */
+.custom-loader {
+    width: 120px;
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+    margin: 20vh auto 1rem auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+}
+
+    .custom-loader .loader-bar {
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg, #90caf9 0%, #1b6ec2 100%);
+        border-radius: 4px;
+        animation: loader-move 1.2s infinite cubic-bezier(.4,0,.2,1);
+        will-change: transform;
+    }
+
+@keyframes loader-move {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(167%);
+    }
+}
+
+/* Dark Mode für Buttons */
+.btn,
+.btn:active,
+.btn:focus,
+.btn-primary,
+.btn-secondary,
+.btn-link {
+    background-color: #23272b !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+    .btn:hover,
+    .btn:active:hover,
+    .btn:focus:hover,
+    .btn-link:hover,
+    .btn-link:active,
+    .btn-link:focus {
+        background-color: #343a40 !important;
+        color: #e0e0e0 !important;
+        border-color: #444 !important;
+    }
+
+
+/* Dropdown-Menü im Dark Mode */
+.dropdown-menu {
+    background-color: #23272b !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+.dropdown-item {
+    color: #e0e0e0 !important;
+    background-color: #23272b !important;
+}
+
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background-color: #343a40 !important;
+        color: #e0e0e0 !important;
+    }
+
+/* Startseite Dark Mode */
+.start-screen,
+.fade-out {
+    background: #181818 !important;
+}
+
+.portfolio-title {
+    color: #e0e0e0 !important;
+}
+
+/* Sonstige Styles */
+h1:focus {
+    outline: none;
+}
+
+a, .btn-link {
+    color: #90caf9;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: #232323;
+    color: #e0e0e0;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: #b32121;
+    color: #fff;
+}
+
+code {
+    color: #c02d76;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-list {
+    padding-left: 1.2em;
+    margin-left: 0;
+}
+
+.animated-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.experience-card {
+    background: rgba(20, 20, 20, 0.85);
+    color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    width: 95%;
+    text-align: center;
+    font-size: 1.15rem;
+    opacity: 0.92;
+}
+
+.aboutme-text {
+    padding-left: 24px; /* Abstand zum Bild */
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem; /* Abstand zwischen den Text-Elementen */
+}
